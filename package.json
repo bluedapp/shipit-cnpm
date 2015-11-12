@@ -1,0 +1,34 @@
+{
+  "name": "shipit-cnpm",
+  "version": "0.1.0",
+  "description": "cnpm tasks for shipit",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluedapp/shipit-cnpm.git"
+  },
+  "keywords": [
+    "shipit",
+    "cnpm",
+    "shipit-npm",
+    "shipit-cnpm"
+  ],
+  "author": "mdemo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bluedapp/shipit-cnpm/issues"
+  },
+  "homepage": "https://github.com/bluedapp/shipit-cnpm#readme",
+  "devDependencies": {
+    "shipit-deploy": "^2.0.0"
+  },
+  "dependencies": {
+    "shipit-utils": "^1.3.0"
+  }
+}

@@ -1,8 +1,4 @@
-# shipit-cnpm
-cnpm tasks for Shipit
-
-```javascript
-var cnpm = require('shipit-cnpm');
+var cnpm = require('../');
 var deploy = require('shipit-deploy');
 module.exports = function(shipit) {
   deploy(shipit);
@@ -28,4 +24,3 @@ module.exports = function(shipit) {
     }
   });
 }
-```
