@@ -1,6 +1,10 @@
 # shipit-cnpm
 cnpm tasks for Shipit
 
+support flags
+
+## Usage
+
 ```javascript
 var cnpm = require('shipit-cnpm');
 var deploy = require('shipit-deploy');
