@@ -1,6 +1,6 @@
 {
   "name": "shipit-cnpm",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "cnpm tasks for shipit",
   "main": "index.js",
   "directories": {
