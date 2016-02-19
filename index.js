@@ -8,6 +8,7 @@ module.exports = function (shipit) {
     shipit.config = shipit.config || {};
     shipit.config.cnpm = shipit.config.cnpm || {};
     shipit.config.cnpm.flags = shipit.config.cnpm.flags || '';
+    shipit.config.cnpm.params = shipit.config.cnpm.params || '';  
     shipit.config.cnpm.npm = shipit.config.cnpm.npm || 'cnpm';
     require('./tasks/install')(shipit);
     if (shipit.config.cnpm.local == true) {
