@@ -9,8 +9,14 @@ module.exports = function(shipit) {
     }
     var npm = shipit.config.cnpm.npm;
     var flags = shipit.config.cnpm.flags;
-    return shipit.local(npm + ' install ' + flags, {
+    var cmd = npm + ' install ' + flags;
+    var options = {
       cwd: shipit.config.workspace
-    })
+    };
+    if (shipit.config.cnpm.local == true){
+      return shipit.local(cmd, options)
+    } else {
+      return shipit.remote(cmd, options)
+    }
   }
 }
