@@ -10,13 +10,12 @@ module.exports = function(shipit) {
     }
     var npm = shipit.config.cnpm.npm;
     var flags = shipit.config.cnpm.flags;
-    var params = shipit.config.cnpm.params;
     var install = util.format('%s i %s', npm, flags);
     if (shipit.config.cnpm.local == true){
       return shipit.local(install)
     } else {
       var current = path.join(shipit.config.deployTo, 'current');
-      return shipit.remote(util.format('%s && cd %s && %s', params, current, install));
+      return shipit.remote(util.format('cd %s && %s', current, install));
     }
   }
 }
