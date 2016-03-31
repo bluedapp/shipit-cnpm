@@ -12,14 +12,16 @@ module.exports = function(shipit) {
     var flags = shipit.config.cnpm.flags;
     var params = shipit.config.cnpm.params;
     var install = util.format('%s i %s', npm, flags);
-    if (shipit.config.cnpm.local == true){
-      return shipit.local(install)
-    } else {
+    if (shipit.config.cnpm.remote == true){
       if(params){
         params = util.format('%s &&', params);
       }
       var current = path.join(shipit.config.deployTo, 'current');
       return shipit.remote(util.format('%s cd %s && %s', params, current, install));
+    } else {
+      return shipit.local(install, {
+        cwd: shipit.config.workspace
+      })
     }
   }
 }

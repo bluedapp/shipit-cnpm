@@ -11,12 +11,12 @@ module.exports = function (shipit) {
     shipit.config.cnpm.npm = shipit.config.cnpm.npm || 'cnpm';
     shipit.config.cnpm.params = shipit.config.cnpm.params || '';
     require('./tasks/install')(shipit);
-    if (shipit.config.cnpm.local == true) {
-      shipit.start('cnpm:install');
-    } else {
+    if (shipit.config.cnpm.remote == true) {
       shipit.on('published', function () {
         shipit.start('cnpm:install');
       });
+    } else {
+      shipit.start('cnpm:install');
     }
   })
 };
